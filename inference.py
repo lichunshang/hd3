@@ -158,7 +158,7 @@ def main():
             # resize test
             resized_img_list = [
                 F.interpolate(
-                    img, (th, tw), mode='bilinear', align_corners=True)
+                    img, (int(round(th)), int(round(tw))), mode='bilinear', align_corners=True)
                 for img in img_list
             ]
             output = model(

@@ -1,13 +1,12 @@
 python -u inference.py \
-  --task=stereo/flow \
-  --data_root=path_to_test_data \
-  --data_list=lists/test_data_list \
+  --task=flow \
+  --data_root=/media/cs4li/DATADisk3/EUROC/MH_01_easy/mav0/cam0/data \
+  --data_list=/home/cs4li/Dev/dump/hd3_test/data_list \
   --context \
   --encoder=dlaup \
   --decoder=hda \
   --batch_size=1 \
   --workers=16 \
-  --flow_format=png/flo \
-  --evaluate \
-  --model_path=path_to_trained_model \
-  --save_folder=path_to_save_predictions
+  --flow_format=png \
+  --model_path=/home/cs4li/Dev/hd3/model_zoo/hd3fc_chairs_things_kitti-bfa97911.pth \
+  --save_folder=/home/cs4li/Dev/dump/hd3_test

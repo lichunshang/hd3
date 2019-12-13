@@ -57,7 +57,7 @@ def read_gen(file_name, mode):
     ext = splitext(file_name)[-1]
     if mode == 'image':
         assert ext in ['.png', '.jpeg', '.ppm', '.jpg']
-        return Image.open(file_name)
+        return Image.open(file_name).convert("RGB")
     elif mode == 'flow':
         assert ext in ['.flo', '.png', '.pfm']
         return fl.read_flow(file_name)
